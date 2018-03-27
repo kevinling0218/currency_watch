@@ -1,0 +1,5 @@
+cron:
+- description: daily summary job
+  url: /task/summary
+  target: beta
+  schedule: every day 12:35

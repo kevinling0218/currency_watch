@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>Currency Watch</title>
+</head>
+
+
+<body id="home">
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Currency Watch</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+               </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+	<header id="home-section">
+		<div class="dark-overlay">
+			<div class="home-inner">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<h1 class="display-4">Currency Watch</h1>
+							<div class="d-flex flex-row">
+								<div class="p-4 align-self-start">
+									<i class="fa fa-check"></i>
+								</div>
+								<div class="p-4 align-self-end">Choose your own currency watch list so that you will not miss any exchange opportunities
+								</div>
+							</div>
+							<div class="d-flex flex-row">
+								<div class="p-4 align-self-start">
+									<i class="fa fa-check"></i>
+								</div>
+								<div class="p-4 align-self-end">Daily email to your address (remember to check your spam box)
+								</div>
+							</div>
+							<div class="d-flex flex-row">
+								<div class="p-4 align-self-start">
+									<i class="fa fa-check"></i>
+								</div>
+								<div class="p-4 align-self-end">Next version of the software available soon
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="card text-center bg-primary card-form">
+								<div class="card-body">
+									<h3>Sign Up Today</h3>
+									<p>Please note that only NUS email is allowed</p>
+									<div class="form-body">
+										<ul class="nav nav-tabs final-login">
+											<li class="active"><a href="#sectionB" data-toggle="tab" style="color: #fff">Login</a></li>
+											<li><a href="#sectionA" data-toggle="tab" style="color: #fff">Sign Up</a></li>
+										</ul>
+										<div class="tab-content">
+										<div id="sectionA" class="tab-pane">
+											<div class="innter-form">
+												<form class="sa-innate-form" id="sign_up_form" method="post">
+													<div class="form-group">
+														<input type="text" class="form-control form-control-lg" placeholder="Username" name="username" value="{{username}}">
+														<span class="error" style="color: red">{{error_username}}</span>
+													</div>
+													<div class="form-group">
+														<input type="email" class="form-control form-control-lg" placeholder="Email address" name="email" value={{email}}>
+														<span class="error" style="color: red">{{error_email}}</span>
+													</div>
+													<div class="form-group">
+														<input type="password" class="form-control form-control-lg" placeholder="Password" name="password" value="{{password}}">
+														<span class="error" style="color: red">{{error_password}}</span>
+													</div>
+													<div class="form-group">
+														<input type="password" class="form-control form-control-lg" placeholder="Confirm Password" name="confirm_password" value="confirm_password">
+														<span class="error" style="color: red">{{error_verify}}</span>
+													</div>
+													<input type="submit" class="btn btn-block btn-outline-light" name="signup_button">
+												</form>					
+											</div>
+										</div>
+										<div id="sectionB" class="tab-pane in active">
+											<div class="innter-form">
+												<form method="post" class="sa-innate-form" id="login_form" >
+													<div class="form-group">
+														<input type="text" class="form-control form-control-lg" placeholder="Username" value="{{username}}" name="login_username">
+													</div>
+													<div class="form-group">
+														<input type="password" class="form-control form-control-lg" placeholder="Password" value="{{password}}" name="login_password">
+														<span class="error" style="color: red">{{error_login}}</span>
+													</div>
+													<input type="submit" name="login_button" class="btn btn-block btn-outline-light">
+												</form>					
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<!--
+	<div class="container" style="padding: 250px 250px">
+			<form method="post" id="parentForm" class="form-signin">
+				<img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+				<div class="form-group">
+					<label >Please input your email</label>
+					<input type="email" name="email_address" class="form-control">
+					<span class="error" style="color: red">{{error_email}}</span>
+				</div>
+				<div id="append">
+				<label>Please select your currency</label>
+				<br>
+				<div id="currency_1" class="form-row">
+					<div class="form-group col-md-5 col-sm-5" id='base_currency'>
+						<select name="currency_1_1" id="currency_1_1" class="form-control">
+							<option>SGD</option>
+							<option>CNY</option>
+							<option>USD</option>
+							<option>EUR</option>
+						</select> 
+					</div>
+					<div class="form-group col-md-5 col-sm-5" id="alternate_currency">
+						<select name="currency_1_2" id="currency_1_2" class="form-control col-md-6 col-sm-6">
+							<option>USD</option>
+							<option>CNY</option>
+							<option>SGD</option>
+							<option>EUR</option>
+						</select> 
+					</div>
+					<div class="form-group col-sm-2 col-md-2" id="button">
+						<input type="button" id="add_button" value="Add Currency" class="btn btn-warning">
+					</div>
+					<div class="form-group" id="error">
+						<span class="error" style="display:none" id="error_currency_1">Please select correct currency pairs</span>
+					</div>
+				</div>
+				</div>
+				<div class="form-group">
+				<input type="submit" id = "submit" value="submit" class="btn btn-primary">
+				</div>
+			</form>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	console.log("JQ working")
+	var index = 1;
+	var index_1 = 2;
+	var currency_pair = [];
+
+	// Create a remove button
+	var remove_1 = $('<input type="button" value="remove" id="remove_button">');
+
+	$("#add_button").click(function(){
+		console.log(index);
+		var remove = $('<input />', {type:'button', value:'Remove',  id:'remove_'+index_1, class:'btn btn-warning' });
+		$("#append").append($("#currency_1").clone().attr({"name":"currency_"+index_1, "id":"currency_"+index_1}))
+		//$("#currency_"+index).after($("#currency_"+index).clone().attr({"name":"currency_"+index_1, "id":"currency_"+index_1}));
+		$("#currency_"+index_1).children('#button').children('#add_button').replaceWith(remove)
+		$('#currency_'+index_1).children('#error').children('#error_currency_1').attr("id","error_currency_"+index_1);
+		$("#error_currency_"+index_1).css("display","none")
+		$("#currency_"+index_1).css("display","inline");
+		$("#currency_"+index_1).children('#base_currency').children('#currency_'+index+'_1').attr({"name":"currency_"+index_1+"_1","id":"currency_"+index_1+"_1"});
+
+		$("#currency_"+index_1).children('#alternate_currency').children('#currency_'+index+'_2').attr({"name":"currency_"+index_1+"_2","id":"currency_"+index_1+"_2"});
+		$("#currency_"+index_1).children('#remove_'+index).attr({"name":"remove_"+index_1,"id":"remove_"+index_1});
+
+
+		index = index + 1;
+		index_1 = index + 1;
+
+	
+
+
+	    $("#remove_"+index).click(function(){
+	        //Remove the whole cloned div
+	        console.log("remove working")
+	        $(this).closest("div").parent().remove();
+	    });
+	});
+
+	$("form").change(function() {
+		// iterate over existing currency pair for validation
+		for (i = 1; i < index+1; i++) {
+
+			if ($('#currency_'+i+'_1').val() != $('#currency_'+i+'_2').val()) {
+				$('#error_currency_'+i).css("display","none")
+			}
+			else {
+				$('#error_currency_'+i).css({"display":"block", "color":"red"});
+			}
+		}
+	});
+
+	$('#submit').click(function(){
+		var index_num = index - 1;
+		$('#parentForm').append('<input type="hidden" id = "index_num" />')
+		$('#index_num').val(index_num)
+
+
+		// clear all the error message is there is any
+		$("span").css("display", "none")
+
+		// Get all values in the existing field 
+		var all_currency = $("select").map(function(){
+			return $(this).val();
+		}).get();
+
+		var all_currency_list = all_currency.toString();
+		$('#parentForm').append('<input type="hidden" id = "all_currency_list" name = "all_currency_list">')
+		$('#all_currency_list').val(all_currency_list);
+		$('#parentForm').append('<input type="hidden" id = "all_currency_list_length">').attr("value", all_currency.length);
+
+		console.log(all_currency_list)
+		console.log($('#index_num').val())
+		console.log($('#all_currency_list').val())
+
+		//console.log($("#index_num").val());
+	});
+});
+</script>
+
+<!-- <script type="text/javascript">
+	// find original form
+	var next = 2;
+	function Add_Currency() {
+		console.log("Add currency")
+		var f = document.getElementById("parentForm");
+
+		// create input element
+		var new_currency = document.getElementById("currency_selection_1");
+		new_currency.name = "currency_"+next;
+		console.log(new_currency.name)
+		next = next +1;
+		f.appendChild(new_currency);
+	}
+</script> -->
+
+</html>
